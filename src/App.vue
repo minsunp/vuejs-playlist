@@ -8,7 +8,7 @@
         <app-footer v-bind:title="title"></app-footer>
     </div>
 </template>
-
+ 
 <script>
 // Imports
 import Header from './components/Header.vue';
