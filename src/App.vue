@@ -1,6 +1,7 @@
 <template>
     <div>
         <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
+        <!-- whenever changeTitle event is fired, call updateTitle. $event=event data -->
         <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
         <ul>
           <li v-for="ninja in ninjas">{{ ninja.name }}</li>
@@ -36,7 +37,7 @@ export default {
     },
     methods: {
       updateTitle: function(updatedTitle){
-        this.title = updatedTitle;
+        this.title = updatedTitle; // when this is updated, titles in both header and footer are re-rendered
       }
     }
 }
